@@ -1,0 +1,10 @@
+Flask
+google.generativeai
+google
+Gunicorn
+scikit-learn
+pandas
+torch.PyPi
+pygments
+
+

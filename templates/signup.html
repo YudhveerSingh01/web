@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-box signup-box">
+                <h2>Signup</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="signup-name">Name</label>
+                        <input type="text" id="signup-name" placeholder="Enter your name">
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="Enter your email">
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Create a password">
+                    </div>
+                    <button type="submit" class="btn">Signup</button>
+                    <div class="register-link">
+                        <span>Already a member?</span>
+                        <a href="/login" id="show-login">Login here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the default way
+
+    // Get input values
+    const name = document.getElementById('signup-name').value.trim();
+    const email = document.getElementById('signup-email').value.trim();
+    const password = document.getElementById('signup-password').value.trim();
+
+    // Check if any field is empty
+    if (name === '' || email === '' || password === '') {
+        alert('Please fill out all fields.');
+    } else {
+        // If all fields are filled, show success message and redirect
+        alert('Registered successfully');
+        window.location.href = '/login';
+    }
+});
+
+
+    </script>
+</body>
+</html>

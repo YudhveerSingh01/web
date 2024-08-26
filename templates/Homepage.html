@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - CodroidHub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .navbar {
+            background-color: #28a745;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background-color: #218838;
+            color: white;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            font-weight: bold;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .theme-section {
+            background-image: url('https://example.com/agriculture-background.jpg'); /* Replace with an appropriate image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+        .theme-section h1 {
+            font-size: 48px;
+            margin: 0;
+            color: #28a745; /* Green color for the title */
+        }
+        .theme-section p {
+            font-size: 24px;
+            margin: 10px 0 0;
+            color: #28a745; /* Green color for the tagline */
+        }
+        .theme-section img {
+            max-width: 100px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            margin-top: -20px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .content h1 {
+            font-size: 36px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 18px;
+            color: #333;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">About Developer 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="https://github.com/YudhveerSingh01" target="_blank">GitHub Profile</a>
+                <a href="https://linkedin.com/in/YudhveerSingh01" target="_blank">LinkedIn Profile</a>
+            </div>
+        </div> 
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+        <a href="https://www.codroidhub.com/">About CodroidHub</a>
+        <!-- <a href="#">Yield Prediction</a>
+        <a href="#">Disease Detection</a>
+        <a href="#">Health Chatbot</a> -->
+    </div>
+
+    <div class="theme-section">
+        <h1>WELCOME TO MY JOURNEY IN AI & ML</h1>
+        <p>Hey! Myself Yudhveer Singh &#x1F44B</p>
+        <button onclick="return window.location.href=`/coding`">
+            Welcome
+        </button>
+    </div>
+
+    <div class="content">
+        <h1>Crop Health Monitoring using AI/ML</h1>
+        <p>Harnessing the Power of Artificial Intelligence and Machine Learning to Ensure Healthier, More Resilient Crops</p>
+        <img id="dimg_231" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWaX6i21Kw6YqwkhxVPYNmcl3-1frVTBpftg&amp;s" class="YQ4gaf" height="159" style="object-position:41% 0%" width="318" alt="The Impact of IoT on Crop Health: A ..." data-csiid="EsbGZrvvGuSVseMP3tWvoQQ_75" data-atf="4" data-ilt="1724302848815" data-deferred="3"> <!-- Replace with an appropriate image URL -->
+    </div>
+
+    <footer>
+        <a href="mailto:contact@codroidhub.com">Contact Us</a> | 
+        <a href="https://github.com/CodroidHub" target="_blank">GitHub</a>
+    </footer>
+
+</body>
+</html>

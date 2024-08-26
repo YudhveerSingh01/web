@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictor</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #00c6ff, #ff00e6);
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            color: #444;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #66afe9;
+        }
+
+        button {
+            padding: 1rem 2rem;
+            background-color: #ff4e50;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            font-family: 'Arial', sans-serif;
+        }
+
+        button:hover {
+            background-color: #ff002a;
+        }
+
+        .prediction {
+            margin-top: 2rem;
+            font-size: 1.25rem;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                width: 95%;
+            }
+        }
+
+        .header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            
+        }
+    .nav-links{
+            font-size: 35px;
+            font-weight: bold;
+            display: flex;
+            position: absolute;
+            right: 20px;
+            gap: 30px;
+        }
+        .linkDes{
+            color: white;
+            text-decoration: none;
+        }
+        .linkDes:hover{
+            text-decoration: underline;
+        }
+        .linkDes:active , .linkDes:visited{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Statistical Domain</h1>
+        <div class="nav-links">
+            <a class="linkDes" href="/">Home</a>
+            <a class="linkDes" href="/login">Login</a>
+            <a class="linkDes" href="/signup">Signup</a>
+        </div>
+    
+    </div>
+    <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+    <div class="container">
+        <h1>Predictor</h1>
+        <form action="/prediction" method="post">
+            <div class="form-group">
+                <label for="Pregnancies">Parameter 1:</label>
+                <input type="number" step="any" id="Pregnancies" name="Parameter 1" required>
+            </div>
+            <div class="form-group">
+                <label for="Glucose">Parameter 2:</label>
+                <input type="number" step="any" id="Glucose" name="Parameter 2" required>
+            </div>
+            <div class="form-group">
+                <label for="BloodPressure">Parameter 3:</label>
+                <input type="number" step="any" id="BloodPressure" name="Parameter 3" required>
+            </div>
+            <div class="form-group">
+                <label for="SkinThickness">Parameter 4:</label>
+                <input type="number" step="any" id="SkinThickness" name="Parameter 4" required>
+            </div>
+            <div class="form-group">
+                <label for="Insulin">Parameter 5:</label>
+                <input type="number" step="any" id="Insulin" name="Parameter 5" required>
+            </div>
+            <div class="form-group">
+                <label for="BMI">Parameter 6:</label>
+                <input type="number" step="any" id="BMI" name="Parameter 6" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+            <p class="prediction">{{ prediction_text }}</p>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>
+
